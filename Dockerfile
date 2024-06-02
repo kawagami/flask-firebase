@@ -12,9 +12,6 @@ COPY ./requirements.txt /app/requirements.txt
 # 安裝所需的 Python 包
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 暴露 Flask 服務器的端口
-EXPOSE 5000
-
 # 設置環境變量以啟用調試模式
 ENV FLASK_ENV=development
 
