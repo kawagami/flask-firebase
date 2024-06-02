@@ -1,0 +1,13 @@
+version: '3.8'
+
+# 本地測試用環境
+services:
+  firebase:
+    image: kawagami77/flask-firebase:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app.py:/app/app.py
+      - ./my-credentials.json:/app/my-credentials.json
+    env_file:
+      - .env
